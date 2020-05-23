@@ -16,6 +16,7 @@ public class BitParidad {
         StringBuilder a;        
         String cadenaIngresado;
         
+        // ingresa datos
 
         Scanner teclado = new Scanner(System.in);
         
@@ -29,6 +30,7 @@ public class BitParidad {
                      
     }  
 
+    
 
     public static StringBuilder paridad(String r){
         
@@ -36,16 +38,19 @@ public class BitParidad {
        StringBuilder p;
        
        char[] aCaracteres = r.toCharArray();     
-            
+        
+       //cuenta la cantidad de unos
        
        if (esBoolean(aCaracteres)){           
-            String q = new String(aCaracteres); 
+           String q = new String(aCaracteres); 
                      
            for (char x: aCaracteres){               
                if(x == '1'){
                         i++;
                }              
            }
+      
+        // verifica la paridad y lo devuelve agregando el bit correspondiente 
            
            if(i%2==0){
                             
@@ -67,6 +72,8 @@ public class BitParidad {
        }
    
     }
+    
+    //verifica que sea un num booleano
     
     public static boolean esBoolean(char[] ingresado){
             
